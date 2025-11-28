@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Favour's Eye Clinic</title>
+
+  <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #e7f7e4;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: url("IMG-20251026-WA0005.jpg") center top / cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Gradient overlay for better text visibility */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.45)
+      );
+      z-index: 1;
+    }
+
+    /* TEXT CONTENT */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 900px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero-title {
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      line-height: 1.1;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 32px;
+      margin-top: 10px;
+      font-style: italic;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* BUTTON */
+    .hero-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 40px;
+      background: #1b72e8;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .hero-button:hover {
+      background: #0a4e9c;
+      transform: scale(1.05);
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE TEXT */
+    @media(max-width: 768px) {
+      .hero-title { font-size: 42px; }
+      .hero-subtitle { font-size: 24px; }
+      .hero-button { font-size: 18px; padding: 12px 30px; }
+    }
+
+    @media(max-width: 480px) {
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 20px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+
+        <h1 class="hero-title">FAVOUR'S EYE CLINIC</h1>
+
+        <p class="hero-subtitle">Healthy Vision Starts Here</p>
+
+        <a href="about.html" class="hero-button">WELCOME</a>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
